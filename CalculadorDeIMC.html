@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<h1>Calculadora de IMC</h1>
+<script>
+
+function imprimir(frase){
+
+    document.write(frase);
+
+}
+
+
+
+function calcularIMC(peso, altura, nombre) {
+
+    return imc = peso / (altura*altura) ;
+    
+} 
+
+nombre = prompt("Ingrese su nombre: "); 
+altura = prompt(nombre + " " + "Ingrese su altura: ");
+peso   = prompt(nombre + " " + "Ingrese su peso: "); 
+imcCalculado = calcularIMC(peso,altura); 
+imprimir(nombre + " " + "su IMC es: " + imcCalculado);
+
+
+    if(imcCalculado < 18.5){
+        imprimir(" " + "estas en un bajo peso ");
+    }
+
+    if(imcCalculado >= 18.5){
+        if(imcCalculado < 25){
+        imprimir(" "+ "estas en un peso ideal ");
+    }
+    }
+    if(imcCalculado >= 25){
+        if(imcCalculado < 30){
+        imprimir(" "+ "estas en obesidad grado 1 ");
+    }
+    }
+ 
+    if(imcCalculado >= 35){
+        if(imcCalculado > 40){
+        imprimir(" "+ "estas en obesidad grado 2 ");
+    }
+    }
+
+</script>

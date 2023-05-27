@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<h1>Programa</h1>
+
+
+<script>
+
+//declaracion de funcion sin parametro 
+function saltarLinea() {
+  
+    document.write("<br><br><br>");
+
+}
+
+//declaracion de funcion con parametro "frase"
+function imprimir(frase) {
+
+    document.write(frase); 
+    saltarLinea();
+
+}
+
+function calcularImc(peso,altura,nombre) {
+
+    return(imc = peso / (altura * altura));
+}
+    nombre = prompt("Escriba su nombre ");
+    pesoInformado = prompt(nombre + " informe su peso "); 
+    alturaInformada = prompt(nombre + "informe su altura "); 
+
+    imcCalculado = calcularImc(pesoInformado,alturaInformada); 
+
+    imprimir("el imc calculado de " + nombre + " es: " + imcCalculado);
+
+   // imprimir("el resultado del imc calculado entre bayron y juan es: " + ((calcularImc(120,1.80)+calcularImc(70,1.60))/2));
+  //  imprimir("el resultado del imc calculado entre Gabriela y Luisa es: " + ((calcularImc(60,1.40)+calcularImc(54,1.70))/2));
+
+// al final me devuelva el promedio de  IMC de ambos 
+</script> 
